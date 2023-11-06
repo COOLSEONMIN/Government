@@ -172,8 +172,14 @@
   background-size: cover;
 }
 .visual ul li:first-child{display: block;}
-.visual ul li:nth-child(1){background: url(../image/aksu.jpg) 70% 50%;}
-.visual ul li:nth-child(2){background: url(../image/office4.jpg);}
+.visual ul li:nth-child(1){
+  background: url(../image/aksu.jpg) no-repeat 70% 50%;
+  background-size: cover;
+}
+.visual ul li:nth-child(2){
+  background: url(../image/office4.jpg) no-repeat;
+  background-size: cover;
+}
 
 /* Square */
 .square1{
@@ -312,7 +318,8 @@
 #wrap{
   width: 100%;
   height: 800px;
-  background: url(../image/background-3301487_1920.jpg) left center;
+  background: url(../image/Background.png)no-repeat;
+  background-size: cover;
 }/* 스크롤바 */
 .header{
   width: 100%;
@@ -359,35 +366,37 @@ nav{
 .section{position: relative;}
 .Gallery{  /*배너전체영역*/
 	position:absolute;
-	width:920px;
+	width:1030px;
 	height:250px;
 /*   border: 1px solid #000; */
 	margin: auto;
   top: 0;
   left: 12%;
   padding: 20px;
-/*   background-color: rgba(255, 255, 255,0.3); */
   color: #666;
-/*   box-shadow: 2px 2px 10px #787878; */
+  text-indent: 5px;
+  border-radius: 5px;
+  background: #e4f1fb;
+  
+  box-shadow: 1px 1px 5px #bfbfbf inset;
 }
 .Gallery .galleryimg{   /*슬라이드영역*/
-	width: 870px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
+	width: 970px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
 	height:170px;
 	overflow:hidden;
 	position: absolute;
 	top: 70px;
-	left: 40px;
-/* 	background:orange;	  */
+	left: 45px;
 }
 .Gallery .galleryimg ul{
 	display: flex;
 	position:relative;
-	left:-340px;  
+	left:-450px;  
 	/*html의 이미지목록에서 끊기지 않고 이어지는 이미지를 위해서 맨 마지막 이미지를 맨 앞에 두었지만,
 	실행화면에 보이는 이미지는 첫번째 이미지어야 하므로, 맨 마지막 이미지를 맨앞에 넣어둔것을 다시 왼쪽으로(left:-255px) 밀어둠 */
 }
 .Gallery .galleryimg ul li{
-	margin-right:10px;
+	margin-right:50px;
 	width:400px;   
 	height:120px;  
 }
@@ -427,12 +436,16 @@ nav{
   top: -10px;
   right: 12%;
   width: 300px;
-  height: 350px;
+  height: 300px;
+  color: #666;
   overflow: hidden; /* (2)넘치는 자식 보이지 않게 -> 슬라이드가 보여지는 영역 */
+  box-shadow: 1px 1px 3px #e2e2e2 inset;
+  border-radius: 5px;
 }
 .slideName{
+  text-indent: 5px;
   margin-bottom: 15px;
-  padding-bottom: 5px;
+  padding: 5px;
   border-bottom: 2px dotted #a9a9a9;
 }
 .slide ul{
@@ -442,6 +455,7 @@ nav{
 .slide ul li img{
   width: 300px;
   height: 250px;
+  box-shadow: 1px 1px 5px #bfbfbf;
 }
 /* 하단버튼 */
 .slide_btn{
